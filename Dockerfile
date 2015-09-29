@@ -7,6 +7,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
+ENV TERM xterm
+
 
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
@@ -39,9 +41,9 @@ VOLUME /config
 EXPOSE 7000
 
 # Add plex.sh to execute during container startup
-RUN mkdir -p /etc/my_init.d
-ADD plex.sh /etc/my_init.d/plex.sh
-RUN chmod +x /etc/my_init.d/plex.sh
+#RUN mkdir -p /etc/my_init.d
+#ADD plex.sh /etc/my_init.d/plex.sh
+#RUN chmod +x /etc/my_init.d/plex.sh
 
 # Add nzbdrone.sh to execute during container startup
 RUN mkdir -p /etc/my_init.d
