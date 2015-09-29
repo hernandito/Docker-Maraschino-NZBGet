@@ -9,7 +9,6 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV TERM xterm
 
-
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
 
